@@ -1,0 +1,21 @@
+Go to docker documentation download docker for ubuntu
+docker -v
+docker images
+docker ps
+Go to docker hub there are multiple images are available for multiple images enviornments
+docker pull openjdk
+docker run --name JAVA -it -d openjdk
+docker ps
+docker -exce -it JAVA jshell
+Inside jshell
+S.O.P("Hello World");
+int a=4,b=6;
+
+S.O.P(a+b)
+docker ps
+/exit
+docker container rm ---containerid--
+docker stop --containerid--
+docker image prune
+
+
