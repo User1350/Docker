@@ -18,4 +18,60 @@ docker container rm ---containerid--
 docker stop --containerid--
 docker image prune
 
+FOR UBUNTU
+
+
+# Step 1: Install Docker
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+
+# Step 2: Verify Docker Installation
+docker -v
+
+# Step 3: Pull OpenJDK Docker Image
+docker pull openjdk
+
+# Step 4: Run Docker Container in Background with Name 'JAVA'
+docker run --name JAVA -it -d openjdk
+
+# Step 5: Check Running Containers
+docker ps
+
+# Step 6: Open JShell Inside the Container
+docker exec -it JAVA jshell
+
+# Exit JShell
+/exit
+
+# Step 7: Stop and Remove Container
+docker stop JAVA
+docker container rm JAVA
+
+# Step 8: Clean Up Unused Docker Images
+docker image prune -f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
